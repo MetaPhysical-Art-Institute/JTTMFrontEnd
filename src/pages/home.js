@@ -1,4 +1,4 @@
-import { useAddress, useDisconnect, useContract, useNetwork, Web3Button } from '@thirdweb-dev/react';
+import { useAddress, useDisconnect, useContract, useNetwork, ConnectWallet } from '@thirdweb-dev/react';
 import { ChainId } from '@thirdweb-dev/sdk';
 import { useState, useEffect } from "react";
 import "./home.css"
@@ -57,7 +57,7 @@ function Home() {
         </>
       ) : (
         <div className='connect'>
-        <Web3Button /> <br></br>
+        <ConnectWallet /> <br></br>
 
         <button>Game</button>
 
