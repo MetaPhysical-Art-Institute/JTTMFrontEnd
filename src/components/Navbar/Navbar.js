@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import "./Header.css";
 import { CSSTransition } from "react-transition-group";
-import maiLogo from "./MAILOGO.png"
+import jttmLogo from "./JTTM4.png"
 import { useDisconnect } from "@thirdweb-dev/react";
 import { Link } from "react-router-dom";
 
@@ -38,7 +38,7 @@ export default function Header() {
     <>
     <div className="font-link">
     <header className="Header">
-      <img src={maiLogo} className="Logo" alt="logo" />
+      <img src={jttmLogo} className="Logo" alt="logo" />
       <CSSTransition
         in={!isSmallScreen || isNavVisible}
         timeout={350}
@@ -47,7 +47,7 @@ export default function Header() {
       >
         <nav className="Nav">
           <Link to="/pages/home">Home</Link>
-          <Link to="/pages/bodega">Bodega</Link>
+          <Link to="/pages/game">Game</Link>
           <div className="disconnect">
           
           </div>

@@ -35,11 +35,12 @@ export default function App() {
     <Header />
   
   <div className="app">
+  <div className="font-face-gm">
 
     <Outlet />
          
       
-  
+  </div>
     </div>
     <Footer />
 

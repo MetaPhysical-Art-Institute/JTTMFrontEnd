@@ -1,18 +1,9 @@
-import { useAddress, useDisconnect, useContract, useNetwork, ConnectWallet } from '@thirdweb-dev/react';
+import { useAddress, useDisconnect, useContract, useNetwork, Web3Button } from '@thirdweb-dev/react';
 import { ChainId } from '@thirdweb-dev/sdk';
-import giveaway2 from "../assets/images/Flower Giveaway.png"
 import { useState, useEffect } from "react";
 import "./home.css"
-import lab from "../assets/images/lab.svg"
-import cleanroom from "../assets/images/cleanroom.svg"
-import { Button } from 'shards-react';
-import nonft from "../assets/images/nonft.svg"
-import giveaway from "../assets/images/giveaway3.png"
-import pste from "../assets/images/pste.svg"
-import Shape from '../components/shape';
-import Motm from '../components/new';
-import showcase from "../assets/images/showcase.svg"
-import Counter from '../components/counter';
+import { Link } from 'react-router-dom';
+
 
 
 
@@ -23,7 +14,7 @@ function Home() {
  
    const network = useNetwork();
    const disconnectWallet = useDisconnect();
-   const edition = useContract("0x63C435B5fcC51eb1d5bA2fC9D6d1EB60348F018f", "edition").contract
+   const edition = useContract("0xbcaF4F275C315D4d092A122e20fF23e56D6A0043", "edition").contract
    const [hasClaimedNFT, setHasClaimedNFT] = useState(false);
    
    useEffect(() => {
@@ -53,7 +44,7 @@ function Home() {
              <>
              <div className='font-link'>
              <div className='signin'>
-            <img src={lab}></img>
+            <p>Journey To The Mothership!</p>
             {address ? (
         <>
           <button onClick={disconnectWallet}>Disconnect Wallet</button>
@@ -61,7 +52,9 @@ function Home() {
         </>
       ) : (
         <div className='connect'>
-        <ConnectWallet />
+        <Web3Button>
+
+        </Web3Button>
         
 
         
@@ -73,10 +66,10 @@ function Home() {
          )
      }
 
-     if (network?.[0].data.chain.id !== ChainId.Mainnet) {
+     if (network?.[0].data.chain.id !== ChainId.FantomTestnet) {
       return (
         <div className="unsupported-network">
-         <img src={pste}></img>
+         <p>Please Switch to Fantom Network</p>
         
         </div>
       );
@@ -89,61 +82,31 @@ function Home() {
      ///////***MEMBERS AREA *//////// THE CLEAN ROOM ***///**** */
 
 
-   if (hasClaimedNFT) {
-       return (
+     if (hasClaimedNFT) {
+      return (
         <>
-        <div className='font-link'>
-           <div className='signin'>
-               <img src={cleanroom}></img>
-               
-               <div className='shape'>
-               <Shape />
-               </div>
-               
-               <br></br><br></br>
-               <div className='image'>
-                <img src={giveaway}></img><br></br>
-                <img src={giveaway2}></img>
-                <p>If you don't already have your 15k GWOP tokens please alert one of the admin on discord to get you your tokens! You need 15k in order to make proposals to our DAO! </p>
-                <br></br>
-                <img src={showcase}></img><br></br>
-                <div className='motm'>
-                <Motm />
-                </div>
-                <p>New collection from artist Alana Enfinity - "Past & Present" - Coming soon!</p>
-
-                <Counter />
-
-
-               </div>
-             
-               <br></br>  
-               
-               
+          <p className='member'>Journey Membership Area</p>
+          <p className='member'>THANKS FOR PLAYING!!</p>
+          <p className='message'>You have successfully claimed a Shrümëz NFT and entered the members-only area of the dApp. We are working on adding a marketplace 
+          and on-chain leaderboard shortly! We hope you enjoy the game! Please leave feedback at our <Link to={"/discord"}>discord</Link></p>
           
-             <a href='https://mai-vote-dao.vercel.app'> 
-             <Button>Proposal Dashboard</Button> <br></br><br></br>
-             
-             
-              
-             </a>
-             <button onClick={disconnectWallet}>X</button> 
-             <br>
-             </br>
-             <p>Links to our discord and spatial gallery coming soon!</p>
-             
-           
+          <div className='button-container'>
+            <button className='leaderboard-button'>Leaderboard</button>
+            <button className='marketplace-button'>Marketplace</button>
+            <button className='button-container' onClick={disconnectWallet}>Disconnect Wallet</button>
+          </div>
           
-        
- 
-         
-          </div>
-          </div>
-</>
-
-           
-       )
-   }
+          
+        </>
+      )
+    }
+    
+    
+    
+    
+    
+    
+    
 
    
    
@@ -163,12 +126,12 @@ function Home() {
 
    return (
     <>
-    <div className='signin'>
-      <img src={nonft}></img>
+    <div className='member'>
+      <p>You gotta play to get in! </p>
    
      
       <center>
-      <button onClick={disconnectWallet}>X</button>
+      <button className="button-container" onClick={disconnectWallet}>Disconnect Wallet</button>
       </center>
       </div>
     </>

@@ -1,52 +1,63 @@
 .Header {
-  position:relative;
+  position: relative;
   z-index: 1;
   top: 0; /* Stick it to the top */
-  max-height: 70px;
+  height: 160px; /* Updated height */
   width: 100vw;
   padding: 1px;
   display: grid;
-  grid-template-areas: "logo nav";
+  grid-template-areas: "nav logo nav"; /* Updated grid template areas */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 
-  /* Cosmetics */
-  background-color: #000000;
-  box-shadow: rgba(50, 255, 4, 0.983) 0px 10px 20px, rgba(84, 246, 14, 0.893) 0px 6px 6px;
-  animation: fluorescence .3s linear 3;
-  transition: box-shadow 0.5s;
+
+ /* Cosmetics */
+ background-color: #000000;
+ box-shadow: rgba(106, 72, 255, 0.983) 0px 10px 20px, rgba(71, 107, 246, 0.893) 0px 6px 6px;
+ animation: fluorescence .3s linear 3;
+ transition: box-shadow 0.5s;
 }
 
 @keyframes fluorescence {
   0% {
-    box-shadow: rgba(50, 255, 4, 0.983) 0px 10px 20px, rgba(84, 246, 14, 0.893) 0px 6px 6px;
+    box-shadow: rgba(106, 72, 255, 0.983) 0px 10px 20px, rgba(71, 107, 246, 0.893) 0px 6px 6px;
   }
   50% {
-    box-shadow: rgba(50, 255, 4, 0) 0px 10px 20px, rgba(84, 246, 14, 0) 0px 6px 6px;
+    box-shadow: rgba(106, 72, 255, 0) 0px 10px 20px, rgba(71, 107, 246, 0) 0px 6px 6px;
   }
   100% {
-    box-shadow: rgba(50, 255, 4, 0.983) 0px 10px 20px, rgba(84, 246, 14, 0.893) 0px 6px 6px;
+    box-shadow: rgba(106, 72, 255, 0.983) 0px 10px 20px, rgba(71, 107, 246, 0.893) 0px 6px 6px;
   }
 }
 
 
 .Logo {
   grid-area: logo;
-  height: 70px;
+  height: 150px; /* Adjusted height */
+  width: 150px; /* Adjusted width */
+  justify-self: center; /* Center horizontally */
+  align-self: center; /* Center vertically */
 }
 
 .Nav {
-  display: grid;
   grid-area: nav;
-  grid-template-columns: repeat(5, auto);
+  display: flex;
+  justify-content: space-between; /* Place links on either side */
   align-items: center;
-  justify-items: center;
 }
+@font-face {
+  font-family: 'Strengthen';
+  src: url('Strengthen.ttf') format('truetype');
+}
+
 .Nav a {
   color: #fff;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 500;
   transition: 0.5s;
   text-decoration: none;
-  
+  margin: 0 100px;
+  font-family: 'Strengthen', sans-serif; /* Apply the custom font */
 }
 .Nav a:hover {
   transform: scale(1.1);
