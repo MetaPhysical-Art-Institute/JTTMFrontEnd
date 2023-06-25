@@ -43,8 +43,13 @@ function Home() {
          return (
              <>
              <div className='font-link'>
-             <div className='signin'>
-            <p>Journey To The Mothership!</p>
+             <div className='member'>
+            <p>Journey To The Mothership!
+              <br></br>
+              Log In or Click "Game" to Play!
+            </p>
+            </div>
+            <div className='signin'>
             {address ? (
         <>
           <button onClick={disconnectWallet}>Disconnect Wallet</button>
@@ -52,9 +57,11 @@ function Home() {
         </>
       ) : (
         <div className='connect'>
-        <Web3Button>
+        <Web3Button /> <br></br>
 
-        </Web3Button>
+        <button>Game</button>
+
+
         
 
         
