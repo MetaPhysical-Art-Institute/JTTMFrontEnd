@@ -1,0 +1,21 @@
+.thirdwebcard {
+    padding: 20px;
+    display: block;
+  
+}
+
+.art {
+    padding: auto;
+
+}
+
+@media (max-width: 700px) {
+    .frame {
+      max-width: 300px;
+    }
+
+    
+  }
+
+
+  

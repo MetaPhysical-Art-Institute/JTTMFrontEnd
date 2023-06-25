@@ -1,0 +1,57 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+  }
+  
+  .item {
+    flex: 0 32%;
+    height: 100px;
+    margin-bottom: 30%;
+    
+
+    
+
+  }
+
+  .item button {
+    color: rgb(255, 255, 255);
+  }
+
+
+
+  @media (min-width: 700px) {
+    .item {
+      margin-bottom: 35%;
+
+    }
+    
+ }
+
+ @media (max-width:500px) {
+
+
+  .item {
+    flex: 0 32%;
+    height: 100px;
+    margin-bottom: 0%;
+ }
+
+ .container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+ }
+
+
+  .item img {
+    max-width: 100px;
+    max-height: 100px;
+    
+  }
+
+
+ }

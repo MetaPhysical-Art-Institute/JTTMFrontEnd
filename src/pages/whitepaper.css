@@ -1,0 +1,18 @@
+.whitepaper {
+    display: center;
+    color: aliceblue;
+
+}
+
+.mobilewhitepaper {
+    color: rgb(0, 0, 0);
+}
+
+
+
+@media (max-width:700px) {
+    .whitepaper {
+        display: none;
+    }
+
+}
