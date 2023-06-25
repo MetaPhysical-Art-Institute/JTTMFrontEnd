@@ -14,9 +14,11 @@
     
 }
 
-.featuredNFTs{
-    padding: 20px;
-}
+
+
+.font-face-gm {
+    font-family: "GoldmanBold";
+  }
 
 .splash {
     display: flex;
