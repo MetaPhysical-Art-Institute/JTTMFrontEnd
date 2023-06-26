@@ -59,8 +59,10 @@ function Home() {
         <div className='connect'>
         <ConnectWallet /> <br></br>
 
-        <button>Game</button>
 
+       <button>
+       <Link to="/pages/game">Game</Link> 
+       </button>
 
         
 

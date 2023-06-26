@@ -1,21 +1,20 @@
 .Header {
   position: relative;
   z-index: 1;
-  top: 0; /* Stick it to the top */
-  height: 160px; /* Updated height */
+  top: 0;
+  height: 160px;
   width: 100vw;
   padding: 1px;
   display: grid;
-  grid-template-areas: "nav logo nav"; /* Updated grid template areas */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  grid-template-areas: "nav logo nav";
+  justify-content: center;
+  align-items: center;
 
-
- /* Cosmetics */
- background-color: #000000;
- box-shadow: rgba(106, 72, 255, 0.983) 0px 10px 20px, rgba(71, 107, 246, 0.893) 0px 6px 6px;
- animation: fluorescence .3s linear 3;
- transition: box-shadow 0.5s;
+  /* Cosmetics */
+  background-color: #000000;
+  box-shadow: rgba(106, 72, 255, 0.983) 0px 10px 20px, rgba(71, 107, 246, 0.893) 0px 6px 6px;
+  animation: fluorescence .3s linear 3;
+  transition: box-shadow 0.5s;
 }
 
 @keyframes fluorescence {
@@ -30,21 +29,41 @@
   }
 }
 
-
 .Logo {
   grid-area: logo;
-  height: 150px; /* Adjusted height */
-  width: 150px; /* Adjusted width */
-  justify-self: center; /* Center horizontally */
-  align-self: center; /* Center vertically */
+  height: 150px;
+  width: 150px;
+  justify-self: center;
+  align-self: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden; /* Ensure the box shadow doesn't overflow */
+}
+
+.Logo::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: yellow;
+  box-shadow: 0 0 5px yellow;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.Logo:hover::after {
+  opacity: 1;
 }
 
 .Nav {
   grid-area: nav;
   display: flex;
-  justify-content: space-between; /* Place links on either side */
+  justify-content: space-between;
   align-items: center;
 }
+
 @font-face {
   font-family: 'Strengthen';
   src: url('Strengthen.ttf') format('truetype');
@@ -57,20 +76,17 @@
   transition: 0.5s;
   text-decoration: none;
   margin: 0 100px;
-  font-family: 'Strengthen', sans-serif; /* Apply the custom font */
+  font-family: 'Strengthen', sans-serif;
 }
+
 .Nav a:hover {
   transform: scale(1.1);
   border-color: chartreuse;
-  text-decoration:overline;
+  text-decoration: overline;
   text-decoration-color: chartreuse;
   color: rgb(75, 75, 75);
-
 }
 
-  
-
-/* CSS */
 .Nav button {
   padding: 0.6em 2em;
   border: none;
@@ -140,7 +156,6 @@
 
 .Nav button:active {
   transform: translateY(3px);
-  
 }
 
 .Burger {
@@ -155,50 +170,62 @@
   outline: none;
   transition: 0.1s;
 }
+
 .Burger:active {
   transform: scale(1.2);
 }
 
 @media (max-width: 700px) {
   .Header {
-    grid-template-areas: "logo burger" "nav nav";
+    grid-template-areas: "logo" "nav";
+    justify-items: center;
   }
-  .Nav {
-    grid-template-rows: repeat(5, auto);
-    grid-template-columns: none;
-    grid-row-gap: 20px;
 
-    padding: 30px 0 30px;
-    background: rgba(40, 44, 47, 0.95);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+  .Nav {
+    grid-row: 2;
+    margin-top: 20px;
   }
+
   .Burger {
     display: inline;
   }
+
+  .Logo::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: yellow;
+    box-shadow: 0 0 5px yellow;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .Logo:hover::after {
+    opacity: 1;
+  }
+  
 }
 
 .NavAnimation-enter {
   opacity: 0;
   transform: scale(0.5);
 }
+
 .NavAnimation-enter-active {
   opacity: 1;
   transform: translateX(0);
   transition: opacity 350ms, transform 350ms;
 }
+
 .NavAnimation-exit {
   opacity: 1;
 }
+
 .NavAnimation-exit-active {
   opacity: 0;
   transform: scale(0.5);
   transition: opacity 350ms, transform 350ms;
-}
-.font-link {
-font-family: 'Raleway', sans-serif;
-}
-.disconnect{
-  max-width: 5px;
 }
