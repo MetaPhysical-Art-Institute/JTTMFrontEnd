@@ -98,10 +98,9 @@ function Home() {
           <p className='member'>THANKS FOR PLAYING!!</p>
           <p className='message'>You have successfully claimed a Shrümëz NFT and entered the members-only area of the dApp. We are working on adding a marketplace 
           and on-chain leaderboard shortly! We hope you enjoy the game! Please leave feedback at our <Link to={"/discord"}>discord</Link></p>
-          
+
           <div className='button-container'>
-            <button className='leaderboard-button'>Leaderboard</button>
-            <button className='marketplace-button'>Marketplace</button>
+           
             <button className='button-container' onClick={disconnectWallet}>Disconnect Wallet</button>
           </div>
           
