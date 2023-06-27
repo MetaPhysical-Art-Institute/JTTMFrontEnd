@@ -1,5 +1,53 @@
+/* Container for the leaderboard and NFT display */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* Leaderboard styles */
+.leaderboard {
+  flex: 1;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-family: 'Strengthen', sans-serif;
+}
+
+/* NFT display styles */
+.nft-display {
+  flex: 1;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-family: 'Strengthen', sans-serif;
+  overflow: scroll;
+  max-height: 400px;
+}
+
+/* Square sharp buttons */
+.button-container button {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #6f00ff; /* Purple */
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Button hover styles */
+.button-container button:hover {
+  background-color: #00ff66; /* Green */
+}
+
+/* Other styles remain unchanged */
 .signin {
-    color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
 }
 
 .member {
@@ -32,37 +80,13 @@
   left: 50%;
   width: 100%;
   height: 4px;
-  background-color: #00ff66; /* Green */
   transform: translateX(-50%);
 }
 
-.button-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.button-container button {
-  font-size: 16px;
-  font-weight: bold;
-  color: #ffffff;
-  background-color: #6f00ff; /* Purple */
-  border: none;
-  padding: 12px 20px;
-  border-radius: 6px;
-  margin: 0 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  
-}
 .message {
   font-size: 20px;
   font-weight: 600;
   color: #ffffff;
-}
-
-.button-container button:hover {
-  background-color: #00ff66; /* Green */
 }
 
 @font-face {
@@ -70,32 +94,20 @@
   src: url('Strengthen.ttf') format('truetype');
 }
 
-
-
-.image img{
+.image img {
   max-width: 450px;
   display: inline-block;
 }
+
 .signin p {
   padding: 20px;
 }
 
-.nft {
-  padding: 20px;
-  display: inline;
-  position: relative;
-  overflow: scroll;
-  max-height: 400px;
-  width: 100%;
-}
-
-.welcome{
+.welcome {
   padding: 20px;
 }
-
 
 .signin button {
-
   padding: 0.6em 2em;
   border: none;
   outline: none;
@@ -114,15 +126,8 @@
   content: "";
   background: linear-gradient(
     45deg,
-    #ff0000,
-    #ff7300,
-    #fffb00,
-    #48ff00,
-    #00ffd5,
-    #002bff,
-    #7a00ff,
-    #ff00c8,
-    #ff0000
+    #800080,
+    #00ff00
   );
   position: absolute;
   top: -2px;
@@ -165,34 +170,6 @@
 .signin button a {
   color: aliceblue;
   text-decoration: none;
-  
-}
-
-.widget {
-  padding: 20px;
-  padding-left: 40px;
-  align-items: center;
-  display: flex;
-
-  
-
-}
-
-.discord {
-width: 100%;
-}
-
-.addy {
-  width: 100%;
-  
-}
-
-.scheduleheader {
-  width: 100%;
-}
-
-.events {
-  width: 100%;
 }
 
 .unsupported-network {
@@ -200,42 +177,20 @@ width: 100%;
   max-width: 100%;
   margin: auto;
   padding: 1rem;
+  color: white;
 }
 
-.shape{
-  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-  height: 200px;
-  max-width: 450px;
-  display: inline;
-  
-}
 
 @media (max-width: 700px) {
-  .spatial {
-    display: none;
-
-  }
-
+ 
   .image img {
     max-width: 300px;
-
   }
+}
 
-  
 
-  
-}
-.connect {
-  max-width: 200px;
-  display: inline-block;
-}
-.motm {
-  max-width: 450px;
-  display: inline-flex;
-  height: 450px;
-}
+
 
 .font-link {
   font-family: 'Raleway', sans-serif;
-
 }
