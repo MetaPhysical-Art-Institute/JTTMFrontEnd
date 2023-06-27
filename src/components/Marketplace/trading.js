@@ -1,4 +1,4 @@
-import Navbar from "@/components/Navbar";
+
 import React, { useState } from "react";
 
 import { useContract, useDirectListings, MediaRenderer, Web3Button, useAddress } from "@thirdweb-dev/react";
@@ -19,7 +19,7 @@ const Trading = () => {
 
   return (
     <div className="flex flex-col min-h-screen font-sharetech">
-      <Navbar />
+    
       <div className="flex-grow flex flex-col justify-center items-center pb-8">
         <div className="grid grid-rows-1 h-1/3 text-center text-3xl border-black">
           <div className="flex border-b text-sm justify-center">
@@ -84,7 +84,7 @@ const Trading = () => {
           <CreateListing />
         </div>
         <button className="button mt-4 mx-12 bg-white border-2 text-black font-bold py-1 px-4">
-          <Link href={"/"}>MAIN MENU</Link>
+         
         </button>
        
       </div>
