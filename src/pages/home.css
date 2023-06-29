@@ -27,6 +27,7 @@
   margin: 10px;
 }
 
+
 .member::before {
   content: '';
   position: absolute;
@@ -48,6 +49,40 @@
  
   transform: translateX(-50%);
 }
+
+.bio {
+  width: 300px; /* Adjust width as needed */
+  height: 150px; /* Adjust height as needed */
+  overflow: hidden;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-box {
+  animation: scroll 120s linear infinite;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.scroll-box:hover {
+  animation-play-state: paused;
+  
+
+}
+.Roganite img{
+  max-width: 400px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 
 .button-container {
   display: flex;

@@ -5,6 +5,7 @@ import "./home.css"
 import { Link } from 'react-router-dom';
 import LeaderBoard from '../components/Leaderboard/leaderboard';
 import CreateListing from '../components/Marketplace/createlisting';
+import Roganite from "../components/Images/Roganite.png"
 
 
 
@@ -102,7 +103,20 @@ function Home() {
           <div className='member2'>
 
           
-          <CreateListing/>
+          <div className='bio'>
+            <div className='scroll-box'>
+            <p>Unveil the gripping tale of Roganite, an extraterrestrial mineral of immense power in our game. Once harnessed for good by the enigmatic scientist Dr. Xander Van Der Klone,
+               Roganite turned sinister. Driven by twisted ambitions, he cloned influential figures to manipulate the world. To foil his plans, you must collect Roganite from ATMs used by his clones.
+               As the hero, navigate treacherous levels, defeat clones, and gather Roganite tokens. Only by harnessing its power can you confront Dr. Van Der Klone and restore balance. The fate of humanity hangs in the balance.
+                Embark on this epic quest and prevail against evil.</p>
+                
+          </div>
+          
+          </div>
+          <div className='Roganite'>
+          <h3>Rognaite Specimen</h3>  
+          <img src={Roganite}></img>
+          </div>
           </div>
 
           <div className='button-container'>
