@@ -3,6 +3,8 @@ import { ChainId } from '@thirdweb-dev/sdk';
 import { useState, useEffect } from "react";
 import "./home.css"
 import { Link } from 'react-router-dom';
+import LeaderBoard from '../components/Leaderboard/leaderboard';
+import CreateListing from '../components/Marketplace/createlisting';
 
 
 
@@ -14,7 +16,7 @@ function Home() {
  
    const network = useNetwork();
    const disconnectWallet = useDisconnect();
-   const edition = useContract("0xbcaF4F275C315D4d092A122e20fF23e56D6A0043", "edition").contract
+   const edition = useContract("0x73EfadA5C7B523CFAF187dB4CF23cB5c6f63c5EE", "edition").contract
    const [hasClaimedNFT, setHasClaimedNFT] = useState(false);
    
    useEffect(() => {
@@ -75,7 +77,7 @@ function Home() {
          )
      }
 
-     if (network?.[0].data.chain.id !== ChainId.FantomTestnet) {
+     if (network?.[0].data.chain.id !== ChainId.Fantom) {
       return (
         <div className="unsupported-network">
          <p>Please Switch to Fantom Network</p>
@@ -96,8 +98,12 @@ function Home() {
         <>
           <p className='member'>Journey Membership Area</p>
           <p className='member'>THANKS FOR PLAYING!!</p>
-          <p className='message'>You have successfully claimed a Shrümëz NFT and entered the members-only area of the dApp. We are working on adding a marketplace 
-          and on-chain leaderboard shortly! We hope you enjoy the game! Please leave feedback at our <Link to={"/discord"}>discord</Link></p>
+          <LeaderBoard />
+          <div className='member2'>
+
+          
+          <CreateListing/>
+          </div>
 
           <div className='button-container'>
            

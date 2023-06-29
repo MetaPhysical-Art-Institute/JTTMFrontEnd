@@ -15,7 +15,7 @@ import Game from "./pages/game";
 
 
 // This is the chainId your dApp will work on.
-const activeChainId = ChainId.FantomTestnet;
+const activeChainId = ChainId.Fantom;
 
 const container = document.getElementById("root");
 const root = createRoot(container);

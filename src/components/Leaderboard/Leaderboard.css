@@ -1,0 +1,66 @@
+.leaderboard-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .leaders {
+    background-color: white;
+    color: black;
+    padding: 8px;
+    border: 2px solid #490e58;
+    border-radius: 4px;
+    margin: 0 12px 4px;
+    font-weight: bold;
+    text-align: center;
+    width: max-content;
+    max-width: 420px;
+    overflow-wrap: anywhere;
+  }
+  
+  .token-stats {
+    background-color: white;
+    border: 4px solid black;
+    border-radius: 4px;
+    margin: 12px;
+    padding: 16px;
+    text-align: center;
+  }
+  
+  .button-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+  }
+  
+  .web3-button {
+    background-color: #49c32b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 12px;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s;
+  }
+  
+  .web3-button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .stats {
+    font-size: 20px;
+    font-weight:lighter;
+    color: #ffffff;
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-family: 'Strengthen', sans-serif;
+    margin: 10px;
+  }
