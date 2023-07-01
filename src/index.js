@@ -9,6 +9,7 @@ import { BrowserRouter, Route, Routes, Navigate} from "react-router-dom";
 
 import Home from "./pages/home";
 import Game from "./pages/game";
+import Marketplace from "./pages/marketplace";
 
 
 
@@ -29,6 +30,7 @@ root.render(
          <Route  path="/" element={<App/>}>
            <Route path="pages/home" element={<Home />} />
            <Route path="pages/game" element={<Game />} />
+           <Route path="pages/marketplace" element={<Marketplace />} />
     
            <Route path="/discord" element={() => {window.location.href = 'https://discord.gg/GgAYeUpVkW';
            return null;

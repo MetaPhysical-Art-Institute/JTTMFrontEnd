@@ -4,6 +4,7 @@ import {
   useContract,
   Web3Button,
 } from "@thirdweb-dev/react";
+import "./listing.css";
 
 // Your smart contract address
 const contractAddress = "0x0d6e7D59a2aA9fd9F0b5612eE6d5F2C324369cE9";
@@ -55,32 +56,29 @@ function CreateListing() {
   };
 
   return (
-    <div>
-      <p>List Your Shrümëz!!</p>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Token ID:
-          <input
-            type="text"
-            value={tokenId}
-            onChange={(e) => setTokenId(e.target.value)}
-            style={{ backgroundColor: "grey", color: "black" }}
-          />
-        </label>
-        <br />
-        <label>
-          Price Per Token:
-          <input
-            type="text"
-            value={pricePerToken}
-            onChange={(e) => setPricePerToken(e.target.value)}
-            style={{ backgroundColor: "grey", color: "black" }}
-          />
-        </label>
-        <br />
-        <div>
-          <span>Choose duration:</span>
-          <div>
+    <div className="container">
+      <div className="form">
+        <p className="title">List Your Shrümëz!!</p>
+        <form onSubmit={handleSubmit}>
+          <label className="input-label">
+            Token ID:
+            <input
+              type="text"
+              value={tokenId}
+              onChange={(e) => setTokenId(e.target.value)}
+              className="input-field"
+            />
+          </label>
+          <label className="input-label">
+            Price Per Token:
+            <input
+              type="text"
+              value={pricePerToken}
+              onChange={(e) => setPricePerToken(e.target.value)}
+              className="input-field"
+            />
+          </label>
+          <div className="radio-group">
             <label>
               <input
                 type="radio"
@@ -100,30 +98,21 @@ function CreateListing() {
               30 days
             </label>
           </div>
-        </div>
-        <br />
-        <Web3Button
-          className="!important uppercase button 
-          ml-12 
-          mr-12 
-          mb-4 
-          bg-gray 
-          border-2 
-          border-solid text-black 
-          font-bold py-2 px-4
-          hover:text-gray
-          hover:border-l-4
-          hover:bg-white text-3xl rounded-none text-center"
-          colorMode="light"
-          accentColor="#49c32b"
-          contractAddress={contractAddress}
-          action={handleSubmit}
-          disabled={isLoading}
-        >
-          {isLoading ? "Creating Listing..." : "Create Direct Listing"}
-        </Web3Button>
-        {error && <p></p>}
-      </form>
+          <div className="button-container">
+            <Web3Button
+              className="web3-button"
+              colorMode="light"
+              accentColor="#49c32b"
+              contractAddress={contractAddress}
+              action={handleSubmit}
+              disabled={isLoading}
+            >
+              {isLoading ? "Creating Listing..." : "Create Direct Listing"}
+            </Web3Button>
+          </div>
+          {error && <p className="error-message">{error}</p>}
+        </form>
+      </div>
     </div>
   );
 }

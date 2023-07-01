@@ -1,7 +1,7 @@
 import { useContract, useContractRead, Web3Button } from "@thirdweb-dev/react";
 import React from "react";
 import "./Leaderboard.css"; // Import the CSS file for styling
-import ActiveClaim from "../Stats/activeClaim";
+
 import TotalSupply from "../Stats/totalSupply";
 
 // Your smart contract address here

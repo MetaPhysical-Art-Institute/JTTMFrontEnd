@@ -64,7 +64,7 @@ function Home() {
 
 
        <button>
-       <Link to="/pages/game">Game</Link> 
+       <Link to="/pages/game">Play JTTM</Link> 
        </button>
 
         
@@ -111,6 +111,9 @@ function Home() {
                 Embark on this epic quest and prevail against evil.</p>
                 
           </div>
+          <button className='member'>
+            <Link to="/pages/marketplace">Shrümëz Market</Link>
+          </button>
           
           </div>
           <div className='Roganite'>
