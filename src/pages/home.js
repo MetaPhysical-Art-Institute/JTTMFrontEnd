@@ -79,14 +79,7 @@ function Home() {
          )
      }
 
-     if (network?.[0].data.chain.id !== ChainId.Fantom) {
-      return (
-        <div className="unsupported-network">
-         <p>Please Switch to Fantom Network</p>
-        <ConnectWallet />
-        </div>
-      );
-    }
+
 
 
     

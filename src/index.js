@@ -2,7 +2,7 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { ChainId, ThirdwebProvider } from "@thirdweb-dev/react";
+import { ChainId, ThirdwebProvider, localWallet, metamaskWallet } from "@thirdweb-dev/react";
 
 import { BrowserRouter, Route, Routes, Navigate} from "react-router-dom";
 
@@ -23,7 +23,13 @@ const root = createRoot(container);
 root.render(
   <React.StrictMode>
     
-    <ThirdwebProvider desiredChainId={activeChainId}>
+    <ThirdwebProvider activeChain={"fantom"}
+    supportedWallets={[metamaskWallet(),localWallet()]}
+    
+   
+    
+    
+    >
       <BrowserRouter>
       
        <Routes>
