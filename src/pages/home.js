@@ -5,6 +5,7 @@ import "./home.css"
 import { Link } from 'react-router-dom';
 import LeaderBoard from '../components/Leaderboard/leaderboard';
 import Roganite from "../components/Images/Roganite.png"
+import RgtBalance from '../components/Stats/roganiteBalance';
 
 
 
@@ -113,6 +114,7 @@ function Home() {
           <div className='Roganite'>
           <h3>Rognaite Specimen</h3>  
           <img src={Roganite}></img>
+          
           </div>
           </div>
 

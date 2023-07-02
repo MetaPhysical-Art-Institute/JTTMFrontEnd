@@ -3,6 +3,7 @@ import React from "react";
 import "./Leaderboard.css"; // Import the CSS file for styling
 
 import TotalSupply from "../Stats/totalSupply";
+import RgtBalance from "../Stats/roganiteBalance";
 
 // Your smart contract address here
 const contractAddress = "0xa418738F3E2Fec459F94DcB5E7B787F7B4Df5666";
@@ -52,6 +53,7 @@ export default function LeaderBoard() {
 </br>
 
 <a>Total Supply:<TotalSupply /></a>
+<RgtBalance />
 <br>
 </br>
 </div>
