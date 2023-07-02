@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import "./home.css"
 import { Link } from 'react-router-dom';
 import LeaderBoard from '../components/Leaderboard/leaderboard';
-import CreateListing from '../components/Marketplace/createlisting';
 import Roganite from "../components/Images/Roganite.png"
 
 
@@ -51,6 +50,8 @@ function Home() {
               <br></br>
               Log In or Click "Game" to Play!
             </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/uNrjG1C_Yus" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <p>We recommend using metamask to easily keep your Shrümëz & Roganite Tokens!</p>
             </div>
             <div className='signin'>
             {address ? (
@@ -82,7 +83,7 @@ function Home() {
       return (
         <div className="unsupported-network">
          <p>Please Switch to Fantom Network</p>
-        
+        <ConnectWallet />
         </div>
       );
     }
@@ -124,7 +125,7 @@ function Home() {
 
           <div className='button-container'>
            
-            <button className='button-container' onClick={disconnectWallet}>Disconnect Wallet</button>
+            <ConnectWallet />
           </div>
           
           
@@ -159,11 +160,19 @@ function Home() {
     <>
     <div className='member'>
       <p>You gotta play to get in! </p>
+      <ConnectWallet />
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/ZE1ROakhSeM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
    
      
       <center>
-      <button className="button-container" onClick={disconnectWallet}>Disconnect Wallet</button>
+      
       </center>
+      </div>
+      <div className='bio'>
+      <p>Unveil the gripping tale of Roganite, an extraterrestrial mineral of immense power in our game. Once harnessed for good by the enigmatic scientist Dr. Xander Van Der Klone,
+               Roganite turned sinister. Driven by twisted ambitions, he cloned influential figures to manipulate the world. To foil his plans, you must collect Roganite from ATMs used by his clones.
+               As the hero, navigate treacherous levels, defeat clones, and gather Roganite tokens. Only by harnessing its power can you confront Dr. Van Der Klone and restore balance. The fate of humanity hangs in the balance.
+                Embark on this epic quest and prevail against evil.</p>
       </div>
     </>
    );
