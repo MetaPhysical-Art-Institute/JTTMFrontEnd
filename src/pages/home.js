@@ -5,7 +5,7 @@ import "./home.css"
 import { Link } from 'react-router-dom';
 import LeaderBoard from '../components/Leaderboard/leaderboard';
 import Roganite from "../components/Images/Roganite.png"
-import RgtBalance from '../components/Stats/roganiteBalance';
+
 
 
 
