@@ -155,15 +155,15 @@ function Home() {
     <>
     <div className='member'>
       <p>You gotta play to get in! </p>
-      <ConnectWallet />
+      
       <iframe width="560" height="315" src="https://www.youtube.com/embed/ZE1ROakhSeM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
    
      
       <center>
-      
+      <ConnectWallet />
       </center>
       </div>
-      <div className='bio'>
+      <div className='member'>
       <p>Unveil the gripping tale of Roganite, an extraterrestrial mineral of immense power in our game. Once harnessed for good by the enigmatic scientist Dr. Xander Van Der Klone,
                Roganite turned sinister. Driven by twisted ambitions, he cloned influential figures to manipulate the world. To foil his plans, you must collect Roganite from ATMs used by his clones.
                As the hero, navigate treacherous levels, defeat clones, and gather Roganite tokens. Only by harnessing its power can you confront Dr. Van Der Klone and restore balance. The fate of humanity hangs in the balance.
