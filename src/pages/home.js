@@ -107,7 +107,7 @@ function Home() {
                 
           </div>
           <button className='member'>
-            <Link to="https://www.shrumez.store">Shrümëz Market</Link>
+            <Link to="https://www.shrumez.store">Shrümëz Store</Link>
           </button>
           
           </div>
