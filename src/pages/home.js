@@ -5,6 +5,7 @@ import "./home.css"
 import { Link } from 'react-router-dom';
 import LeaderBoard from '../components/Leaderboard/leaderboard';
 import Roganite from "../components/Images/Roganite.png"
+import Sponsor from '../components/Sponsors/sponsor';
 
 
 
@@ -158,7 +159,7 @@ function Home() {
       
       <iframe width="560" height="315" src="https://www.youtube.com/embed/ZE1ROakhSeM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
    
-     
+      <Sponsor />     
       <center>
       <ConnectWallet />
       </center>
