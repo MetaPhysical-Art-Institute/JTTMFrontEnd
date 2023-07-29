@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Web3Button } from '@thirdweb-dev/react';
+import "./sponsor.css" 
 
 
 export default function Component() {
@@ -58,8 +59,8 @@ export default function Component() {
         type="number"
         value={price}
         onChange={handlePriceChange}
-        placeholder="Enter Price"
-      />
+        placeholder="Enter Donation"
+      /><br></br>
       <Web3Button
         contractAddress="0x559aC8e8B90986a9ab746e1CEAAA003b4cad1Aae"
         action={handleAction}

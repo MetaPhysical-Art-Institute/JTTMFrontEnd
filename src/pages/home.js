@@ -5,7 +5,7 @@ import "./home.css"
 import { Link } from 'react-router-dom';
 import LeaderBoard from '../components/Leaderboard/leaderboard';
 import Roganite from "../components/Images/Roganite.png"
-import Sponsor from '../components/Sponsors/sponsor';
+
 
 
 
@@ -63,12 +63,18 @@ function Home() {
         </>
       ) : (
         <div className='connect'>
-        <ConnectWallet /> <br></br>
+        <ConnectWallet /> <br></br><br></br>
 
 
        <button>
        <Link to="/pages/game">Play JTTM</Link> 
+       </button><br></br><br></br>
+
+       <button>
+       <Link to="/pages/sponsorshippage">Sponsors Click Here!</Link> 
        </button>
+
+       
 
         
 
@@ -123,6 +129,10 @@ function Home() {
            
             <ConnectWallet />
           </div>
+
+          <button>
+       <Link to="/pages/sponsorshippage">Sponsors Click Here!</Link> 
+       </button>
           
           
         </>
@@ -159,7 +169,7 @@ function Home() {
       
       <iframe width="560" height="315" src="https://www.youtube.com/embed/ZE1ROakhSeM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
    
-      <Sponsor />     
+         
       <center>
       <ConnectWallet />
       </center>
