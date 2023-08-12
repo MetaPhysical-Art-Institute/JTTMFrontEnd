@@ -4,7 +4,7 @@ const Jttm = () => {
   return (
     <>
     <div className='game'>
-    <iframe frameborder="0" src="https://itch.io/embed-upload/8405248?color=333333" allowfullscreen="" width="800" height="620"><a href="https://metaphysicalart.itch.io/mothershipgame">Play Journey to the Mothership! </a></iframe>   
+      <p>Under Maintenance, We will be back in September!</p>
      <br></br>
     <p>Local Wallet Transfer Enabled</p>
     <br></br>
