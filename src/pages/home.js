@@ -60,7 +60,7 @@ function Home() {
              Adventure web3 top down 3d Shooter!!
              <br></br>
              <br></br>
-             If you have previously played and obtained a Shrümëz then log in below! If you have not claimed a Shrümëz then what are you waiting for?! Go play the gasless free "play to earn" shooter loosely based on a star comedian and podcasters mushroom(Shrümëz) trip! Hit game in the menu to check it out! 
+             If you have previously played and obtained a Shrümëz then log in below! If you have not claimed a Shrümëz then what are you waiting for?! Go play the gasless free "play to earn" shooter loosely based on a star comedian and podcasters psychadelic adventures! Hit game in the menu to check it out! 
 
             
               </p>
