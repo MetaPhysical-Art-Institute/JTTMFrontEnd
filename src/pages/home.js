@@ -5,6 +5,8 @@ import "./home.css"
 import { Link } from 'react-router-dom';
 import LeaderBoard from '../components/Leaderboard/leaderboard';
 import Roganite from "../components/Images/Roganite.png"
+import JourneyHomePageImage from "../components/Images/journey10.png";
+import RandomFunction from '../components/Images/randomfunction';
 
 
 
@@ -48,13 +50,28 @@ function Home() {
              <>
              <div className='font-link'>
              <div className='member'>
+              <img src={JourneyHomePageImage}></img>
+              <br></br>
+              <br></br>
+
             <p>Journey To The Mothership!
               <br></br>
-              Log In or Click "Game" to Play!
-            </p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/uNrjG1C_Yus" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <p>We recommend using metamask to easily keep your Shrümëz & Roganite Tokens!</p>
+              <br></br>
+             Adventure web3 top down 3d Shooter!!
+             <br></br>
+             <br></br>
+             If you have previously played and obtained a Shrümëz then log in below! If you have not claimed a Shrümëz then what are you waiting for?! Go play the gasless free "play to earn" shooter loosely based on a star comedian and podcasters mushroom(Shrümëz) trip! Hit game in the menu to check it out! 
+
+            
+              </p>
+              <br></br>
+              <br></br>
+              <RandomFunction />
             </div>
+            <br></br>
+              <br></br>
+              <br></br>
+              
             <div className='signin'>
             {address ? (
         <>
@@ -62,7 +79,7 @@ function Home() {
           <p>Your address: {address}</p>
         </>
       ) : (
-        <div className='connect'>
+        <div className='connect'> 
         <ConnectWallet /> <br></br><br></br>
 
 
@@ -166,6 +183,7 @@ function Home() {
     <>
     <div className='member'>
       <p>You gotta play to get in! </p>
+      <br></br>
       
       <iframe width="560" height="315" src="https://www.youtube.com/embed/ZE1ROakhSeM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
    

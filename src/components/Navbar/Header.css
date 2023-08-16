@@ -31,12 +31,12 @@
 
 .Logo {
   grid-area: logo;
-  height: 150px;
-  width: 150px;
+  height: 120px;
+  width: 120px;
   justify-self: center;
   align-self: center;
   cursor: pointer;
-  position: relative;
+  position: static;
   overflow: hidden; /* Ensure the box shadow doesn't overflow */
 }
 
@@ -76,7 +76,7 @@
   transition: 0.5s;
   text-decoration: none;
   margin: 0 100px;
-  font-family: 'Strengthen', sans-serif;
+  font-family: 'Navigator', sans-serif;
 }
 
 .Nav a:hover {
